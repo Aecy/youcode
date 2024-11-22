@@ -1,7 +1,7 @@
 import {SiteConfig} from '@/lib/site-config';
 import Image from 'next/image';
 import Link from 'next/link';
-import {Typography} from "@/components/ui/Typography";
+import {Typography} from "@/components/ui/typography";
 
 export const Footer = () => {
   return (
@@ -10,7 +10,7 @@ export const Footer = () => {
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
           <div className="flex flex-row items-center gap-2">
             <Image
-              src="/images/you-code.svg"
+              src="/images/logo.svg"
               width={40}
               height={30}
               alt="app logo"
