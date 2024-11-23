@@ -17,8 +17,9 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import {LogOut} from "lucide-react";
+import {LogOut, User2} from "lucide-react";
 import {signOut} from "next-auth/react";
+import Link from "next/link";
 
 export type LoggedButtonProps = {
   user: Session['user']
@@ -44,8 +45,11 @@ export const LoggedButton = (props: LoggedButtonProps) => {
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator/>
         <DropdownMenuGroup>
-          <DropdownMenuItem>
-            Profile
+          <DropdownMenuItem asChild>
+            <Link href={`/account`}>
+              <User2 size={12} />
+              Profile
+            </Link>
           </DropdownMenuItem>
           <DropdownMenuItem>
             Billing

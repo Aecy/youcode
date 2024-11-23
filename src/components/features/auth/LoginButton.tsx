@@ -8,7 +8,7 @@ import {Loader} from "@/components/ui/loader";
 
 export const LoginButton = () => {
   const mutation = useMutation({
-    mutationFn: async () => signIn()
+    mutationFn: async () => signIn('github')
   })
 
   return <Button
